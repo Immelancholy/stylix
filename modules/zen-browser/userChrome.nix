@@ -124,8 +124,8 @@ with colors; ''
     --identity-icon-color: #${base0F-hex}BB !important;
   }
 
-  hbox#titlebar {
-    background-color: #${base00-hex}BB !important;
+  #navigator-toolbox {
+    --zen-main-browser-background-toolbar: #${base00-hex}BB !important;
   }
 
   #zen-appcontent-navbar-container {

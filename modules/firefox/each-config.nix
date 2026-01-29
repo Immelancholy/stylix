@@ -56,6 +56,7 @@ mkTarget {
         });
       }
     )
+    (import ./reader-mode.nix { inherit name lib; })
     (
       {
         cfg,
