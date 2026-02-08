@@ -121,6 +121,7 @@ with colors; ''
       --identity-tab-color: #${base0F-hex}BB !important;
       --identity-icon-color: #${base0F-hex}BB !important;
     }
+  }
 
   /* Variables and styles specific to about:addons */
   @-moz-document url-prefix("about:addons") {
@@ -148,5 +149,10 @@ with colors; ''
     .card {
       background-color: #${base02-hex}BB !important;
     }
+  }
+
+  ::selection {
+    background-color: #${base02-hex} !important;
+    color: #${base05-hex} !important;
   }
 ''
