@@ -4,18 +4,18 @@ mkTarget {
     (
       { fonts }:
       {
-        services.kmscon = {
-          extraConfig = ''
-            font-name=${toString fonts.monospace.name}
-            font-size=${toString fonts.sizes.terminal}
-          '';
+        fonts.packages = [ fonts.monospace.package ];
+
+        services.kmscon.config = {
+          "font-name" = fonts.monospace.name;
+          "font-size" = toString fonts.sizes.terminal;
         };
       }
     )
     (
       { colors }:
       {
-        services.kmscon.extraConfig =
+        services.kmscon.config =
           let
             formatBase =
               name:
