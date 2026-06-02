@@ -5,8 +5,10 @@ mkTarget {
       { fonts }:
       {
         services.kmscon = {
-          fonts = [ fonts.monospace ];
-          extraConfig = "font-size=${toString fonts.sizes.terminal}";
+          extraConfig = ''
+            font-name=${toString fonts.monospace.name}
+            font-size=${toString fonts.sizes.terminal}
+          '';
         };
       }
     )
